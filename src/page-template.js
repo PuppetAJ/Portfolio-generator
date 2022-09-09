@@ -83,7 +83,7 @@ module.exports = templateData => {
     <title>Portfolio Demo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
@@ -98,13 +98,14 @@ module.exports = templateData => {
       </div>
     </header>
     <main class="container my-5">
-
+      ${generateAbout(about)}
+      ${generateProjects(projects)}
     </main>
-    ${generateAbout(about)}
-    ${generateProjects(projects)}
+
     <footer class="container text-center py-3">
-      <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${header.name}</h3>
+    <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${header.name}</h3>
     </footer>
+
   </body>
   </html>
   `;
